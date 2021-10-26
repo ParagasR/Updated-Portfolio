@@ -1,0 +1,74 @@
+:root {
+    --light-black: rgb(47, 47, 47);
+    --other-black: rgb(25, 25, 25)
+}
+
+html {
+  overflow-y: hidden !important; 
+}
+
+/* This is a debugging code that I had found on stack overflow and it will show where all the elements are and what their spacing is*/
+/* * {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  } */
+
+#banner {
+  background-color: var(--light-black);
+}
+
+#content {
+    background-color: var(--other-black);
+}
+
+.navbar {
+  background-color: black;
+  position:fixed;
+  width: 100vw;
+}
+
+a.navbar-item:hover, .navbar-link:hover, .navbar-dropdown a.navbar-item:hover, .navbar-link:focus {
+  background-color: var(--light-black);
+  color: white;
+}
+
+.navbar-item, .navbar-link, .title, .subtitle {
+  color:white;
+}
+
+.navbar-dropdown {
+  background-color: black;
+  border-top: 2px solid var(--other-black);
+}
+
+#cherry-blossom {
+  transform: rotateY(180deg) scale(1, 0.65) rotate(0.05turn);
+}
+
+#img-box {
+  height: fit-content;
+}
+
+#fade-1, #fade-2, #fade-3, #fade-4{
+  opacity: 0;
+  position: relative;
+  animation: fade 1s linear forwards;
+}
+
+#fade-2 {
+  animation-delay: 1.25s;
+}
+
+#fade-3 {
+  animation-delay: 2.5s;
+}
+
+#fade-4 {
+  animation-delay: 3.75s;
+}
+
+@keyframes fade {
+  0% {top: 20px;}
+  100% {opacity: 1; top: 0px}
+}
