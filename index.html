@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html class='is-clipped'>
     <head>
         <title>Ryan Paragas</title>
         <meta charset="UTF-8">
@@ -17,11 +17,11 @@
             <nav class='navbar' role='navigation' aria-label='main navigation'>
                 <div id='navbar' class='navbar-menu mx-3'>
                     <div class='navbar-start'>
-                        <a class='navbar-item'>
+                        <a class='navbar-item page' id='home'>
                             Home
                         </a>
 
-                        <a class='navbar-item'>
+                        <a class='navbar-item page' id='resume'>
                             Resume
                         </a>
 
@@ -30,24 +30,28 @@
                                 Projects
                             </a>
                             <div class='navbar-dropdown'>
-                                <a class="navbar-item">
-                                    Project 1
+                                <a class="navbar-item page" id='option-1'>
+                                    Insomniac's Dashboard
                                 </a>
-                                <a class="navbar-item">
-                                    Project 2
+                                <a class="navbar-item page" id='option-2'>
+                                    Team Profile Generator
                                 </a>
-                                <a class="navbar-item">
-                                    Project 3
+                                <a class="navbar-item page" id='option-3'>
+                                    Readme Generator
                                 </a>
-                                <a class="navbar-item">
-                                    Project 4
+                                <a class="navbar-item page" id='option-4'>
+                                    Weather Dashboard
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class='navbar-end'> 
-                        <a class='navbar-item'>
+                    <div class='navbar-end'>
+                        <a class='navbar-item' id='github' href="https://github.com/ParagasR" target="_blank">
+                            Github
+                        </a>
+
+                        <a class='navbar-item page' id='contact'>
                             Contact
                         </a>
                     </div>
@@ -58,15 +62,15 @@
         </header>
 
         <main>
-            <section class='hero' id='banner'>
+            <section class='hero is-small' id='banner'>
                 <div class='hero-body columns pt-6'>
                     <div class='column is-one-quarter ml-6 mt-5'>
-                        <h2 class='title has-text-left my-5' id='fade-1'>Nothing’s perfect</h2>
-                        <h3 class='subtitle has-text-right my-5' id='fade-1'>the world's not perfect</h3>
-                        <h2 class='title has-text-left my-5' id='fade-2'>but it’s there for us</h2>
-                        <h3 class='subtitle has-text-right my-5' id='fade-2'>trying the best it can</h3>
-                        <h1 class='title has-text-centered mt-3' id='fade-3'>That’s what makes it so damn beautiful</h1>
-                        <h1 class='title has-text-centered mt-6' id='fade-4'>- Roy Mustang</h1>
+                        <h2 class='title has-text-left my-5 fade' id='fade-1'>Nothing’s perfect</h2>
+                        <h3 class='subtitle has-text-right my-5 fade' id='fade-1'>the world's not perfect</h3>
+                        <h2 class='title has-text-left my-5 fade' id='fade-2'>but it’s there for us</h2>
+                        <h3 class='subtitle has-text-right my-5 fade' id='fade-2'>trying the best it can</h3>
+                        <h1 class='title has-text-centered mt-3 fade' id='fade-3'>That’s what makes it so damn beautiful</h1>
+                        <h1 class='title has-text-centered mt-6 fade' id='fade-4'>- Roy Mustang</h1>
                     </div>
 
                     <div class='column pt-0' id='img-box'>
@@ -75,17 +79,89 @@
                 </div>
             </section>
 
-            <section class='hero is-large' id='content'>
-                <div class='hero-body columns'>
-                    <div class='container column'>
-                        <p>lorem ipsum</p>
+            <section class='hero is-medium content'>
+                <div class='hero-body columns fade' id='bio'>
+                    <div class='container column is-5'>
+                        <!-- shadowing Kumusta for hello -->
+                        <h5>Kumusta! I'm Ryan and welcome to my portfolio.</h5> <h5>I am a student at Denver University's Fullstack Developer Bootcamp. I am originally from Southern California and now
+                            reside in Aurora, Colorado. I currently work at UCHealth as a Virtual Health Technician, which includes developing the Diabetes Home
+                            Remote Center program.</h5> <h5>I take pride in my skills as a leader, team member, ingenuity, and my passion to continue to grow my coding skillset. Through self learning, I 
+                                have been independently coding for 8+ years. In addition to my DU Fullstack course load, I am currently teaching myself Kotlin.</h5>
                     </div>
-                    <div class='container column'>
-                        <p>lorem ipsum</p>
+                    <div class='container column is-5'>
+                        <img>
+                    </div>
+                </div>
+
+                <div class='hero-body columns fade' id='project-1'>
+                    <div class='container column is-5'>
+                        <h4>Insomniac's Dashboard</h4>
+                        <h5>This is my first collaborative work as project lead. Despite most of the work was done through teaching, this project was a great experience leading a team</h5>
+                        <h5>This dashboard is movie finder for horror fanatics. They can search for a specific movie or be presented with a list of top horror movies. When the user selects a movie, they
+                            are presented with a trailer, short description, and rating. All previously viewed movies are also saved under the 'Recently viewed' section.
+                        </h5>
+                        <a href='https://github.com/ParagasR/Insomniacs-Dashboard' target="_blank">Github Repo</a>
+                    </div>
+                    <div class='container column is-5'>
+                        <a href='https://paragasr.github.io/Insomniacs-Dashboard/' target="_blank"><img src='./assets/images/ID-preview.png' alt='Insomniacs-Dashboard preview'></a>
+                    </div>
+                </div>
+
+                <div class='hero-body columns fade' id='project-2'>
+                    <div class='container column is-5'>
+                        <h4>Team Profile Generator</h4>
+                        <h5>This is a simple team builder application. The user is prompted to enter in team members and details about them pertaining to their job role. It will then
+                            generate an html file so that the user can be presented with a visual of the team.
+                        </h5>
+                        <a href='https://github.com/ParagasR/Team-profile-Generator' target="_blank">Github Repo</a>
+                    </div>
+                    <div class='container column is-5'>
+                        <img src='./assets/images/TPG-preview.png' alt='Team-profile-Generator preview'>
+                    </div>
+                </div>
+
+                <div class='hero-body columns fade' id='project-3'>
+                    <div class='container column is-5'>
+                        <h4>ReadMe Generator</h4>
+                        <h5>This is a simply readme generator application. The user is prompted to enter all the fields applicable to creating a clean readme. The video to the right will provide
+                            a quick demonstration on how to use the readme generator.
+                        </h5>
+                        <a href='https://github.com/ParagasR/Readme-Generator' target="_blank">Github Repo</a>
+                    </div>
+                    <div class='container column is-5'>
+                        <iframe style="width:700px;height:394px;" src="./assets/images/RG-preview.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                    </div>
+                </div>
+
+                <div class='hero-body columns fade' id='project-4'>
+                    <div class='container column is-5'>
+                        <h4>Weather Dashboard</h4>
+                        <h5>This dashboard will provide a weather forecast for a region specified by the user. After a region is searched, it is saved to the list labelled 'Search History'.</h5>
+                        <a href='https://github.com/ParagasR/Weather-Dashboard' target="_blank">Gitub Repo</a>
+                    </div>
+                    <div class='container column is-5'>
+                        <a href='https://paragasr.github.io/Weather-Dashboard/' target="_blank"><img src='./assets/images/WD-preview.png' alt='Weather-Dashboard preview'></a>
+                    </div>
+                </div>
+
+                <div class='hero-body columns fade' id='resume-content'>
+                    <div class='container column is-5'>
+                        <h4>resume content 1</h4>
+                    </div>
+                    <div class='container column is-5'>
+                        <p>resume content 2</p>
+                    </div>
+                </div>
+
+                <div class='hero-body columns fade' id='contact-content'>
+                    <div class='container column is-5'>
+                        <h4>contact info 1</h4>
+                    </div>
+                    <div class='container column is-5'>
+                        <p>contact info 2</p>
                     </div>
                 </div>
             </section>
-
         </main>
         
         <footer>

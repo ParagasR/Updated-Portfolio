@@ -1,25 +1,15 @@
 :root {
     --light-black: rgb(47, 47, 47);
-    --other-black: rgb(25, 25, 25)
+    --other-black: rgb(25, 25, 25);
+    --custom-text: rgb(175, 175, 175);
 }
-
-html {
-  overflow-y: hidden !important; 
-}
-
-/* This is a debugging code that I had found on stack overflow and it will show where all the elements are and what their spacing is*/
-/* * {
-    background: #000 !important;
-    color: #0f0 !important;
-    outline: solid #f00 1px !important;
-  } */
 
 #banner {
   background-color: var(--light-black);
 }
 
-#content {
-    background-color: var(--other-black);
+.content {
+  background-color: var(--other-black);
 }
 
 .navbar {
@@ -28,18 +18,17 @@ html {
   width: 100vw;
 }
 
-a.navbar-item:hover, .navbar-link:hover, .navbar-dropdown a.navbar-item:hover, .navbar-link:focus {
+a.navbar-item:hover, .navbar-link:hover, .navbar-dropdown a.navbar-item:hover, .navbar-link:focus{
   background-color: var(--light-black);
-  color: white;
 }
 
-.navbar-item, .navbar-link, .title, .subtitle {
-  color:white;
+.navbar-item, .navbar-link, .title, .subtitle, .content h4, .content h5, a.navbar-item:hover, .navbar-link:hover, .navbar-dropdown a.navbar-item:hover, .navbar-link:focus {
+  color:var(--custom-text);
 }
 
 .navbar-dropdown {
   background-color: black;
-  border-top: 2px solid var(--other-black);
+  border-top: 3px solid black;
 }
 
 #cherry-blossom {
@@ -50,7 +39,7 @@ a.navbar-item:hover, .navbar-link:hover, .navbar-dropdown a.navbar-item:hover, .
   height: fit-content;
 }
 
-#fade-1, #fade-2, #fade-3, #fade-4{
+.fade {
   opacity: 0;
   position: relative;
   animation: fade 1s linear forwards;
@@ -68,7 +57,34 @@ a.navbar-item:hover, .navbar-link:hover, .navbar-dropdown a.navbar-item:hover, .
   animation-delay: 3.75s;
 }
 
+#project-1, #project-2, #project-3, #project-4, #resume-content, #contact-content {
+  display: none;
+}
+
+.content h4 h5 {
+  color: var(--custom-text);
+}
+
+/* animations */
 @keyframes fade {
   0% {top: 20px;}
   100% {opacity: 1; top: 0px}
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px black; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--light-black); 
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: black; 
 }
